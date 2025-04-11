@@ -1,10 +1,10 @@
 import React, {useState} from "react";
-import { Text, TextInput } from "react-native-web";
+import { Text, TextInput, View } from "react-native";
 
 export default function MyInputComponent(){
     const [text, setText] = useState('');
     return(
-        <>
+        <View>
             <Text>INPUT</Text>
             <TextInput 
                 style={{backgroundColor:'white',padding:'10px',borderRadius:'10px'}}
@@ -13,6 +13,6 @@ export default function MyInputComponent(){
                 onChangeText={e => setText(e)}
             />
             <Text>{text}</Text>
-        </>
+        </View>
     )
 }

@@ -2,16 +2,15 @@ import React, {useState} from "react";
 import {Text, View, Button} from 'react-native';
 
 // export default function myFirstComponent(Props:name){
-export default function myFirstComponent({name}){
-    const [isActive, setActive]=useState(false)
+export default function ConnectedComponent(props){
     return (
         <View>
-            <Text style={{color:'white'}}>HELLO and Wellcome {name}!
+            <Text style={{color:'white'}}>HELLO and Wellcome {props.name}!
             </Text>
-            <Text>is Active: {isActive?'active':'notActive'}</Text>
+            <Text>is Active: {props.isActive?'active':'notActive'}</Text>
             <Button 
-                onPress={()=>setActive(!isActive)}
-                title={isActive?'deactivate':'activate'}
+                onPress={()=>props.setActive(!props.isActive)}
+                title={props.isActive?'deactivate':'activate'}
             />
         </View>
 )}

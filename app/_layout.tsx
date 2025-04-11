@@ -37,13 +37,15 @@
 //     </ThemeProvider>
 //   );
 // }
-import React from 'react';
+import React, {useState} from 'react';
 import {Text, View, ScrollView, Image, TextInput} from 'react-native';
 
 import MyFirstComponent from '@/components/MyFirstComponent';
 import MyInputComponent from '@/components/MyInputComponent'
+import ConnectedComponent from '@/components/ConnectedComponent'
 
 export default function YourApp(){
+      const [isActive, setActive]=useState(false)
   return (
     <ScrollView
       style={{
@@ -65,6 +67,8 @@ export default function YourApp(){
           }}
           style={{width: 200, height: 200}}
         />
+      <ConnectedComponent name='erstens' isActive={isActive} setActive={setActive} />
+      <ConnectedComponent name='zweitens' isActive={isActive} setActive={setActive} />
       <MyInputComponent />
       <MyFirstComponent name='MCB' />
       <MyFirstComponent name='Babe' />
@@ -76,7 +80,7 @@ export default function YourApp(){
           borderColor: 'white',
           borderWidth: 1,
         }}
-        defaultValue="You can type in me"
+        placeholder="You can type in me"
       />
     </ScrollView>
   );
