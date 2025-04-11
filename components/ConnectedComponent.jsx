@@ -9,6 +9,7 @@ export default function ConnectedComponent(props){
             </Text>
             <Text>is Active: {props.isActive?'active':'notActive'}</Text>
             <Button 
+                color={props.isActive?"red":"green"}
                 onPress={()=>props.setActive(!props.isActive)}
                 title={props.isActive?'deactivate':'activate'}
             />

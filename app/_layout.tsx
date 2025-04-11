@@ -49,7 +49,7 @@ export default function YourApp(){
   return (
     <ScrollView
       style={{
-        backgroundColor: 'rgba(52, 65, 94, 0.8)',
+        backgroundColor: 'rgba(65, 71, 84, 0.8)',
       }}>
       <Text
         style={{color:'white'}}>Some text</Text>
@@ -58,7 +58,7 @@ export default function YourApp(){
           flex: 1,
           justifyContent: 'center',
           alignItems: 'center',
-          backgroundColor: 'rgb(206, 134, 8)'
+          backgroundColor: 'rgb(125, 114, 96)'
         }}>
         <Text>Some more text</Text>
         <Image

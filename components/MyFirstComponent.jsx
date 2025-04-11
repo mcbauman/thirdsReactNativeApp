@@ -10,6 +10,7 @@ export default function myFirstComponent({name}){
             </Text>
             <Text>is Active: {isActive?'active':'notActive'}</Text>
             <Button 
+                color={isActive?"red":"green"}
                 onPress={()=>setActive(!isActive)}
                 title={isActive?'deactivate':'activate'}
             />
