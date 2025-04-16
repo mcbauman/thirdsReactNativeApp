@@ -43,13 +43,16 @@ import {Text, View, ScrollView, Image, TextInput} from 'react-native';
 import MyFirstComponent from '@/components/MyFirstComponent';
 import MyInputComponent from '@/components/MyInputComponent'
 import ConnectedComponent from '@/components/ConnectedComponent'
+import Scrollable from '@/components/Scrollable'
+import MyFlatList from '@/components/MyFlatList'
+import MySectionedList from '@/components/MySectionedList'
 
 export default function YourApp(){
       const [isActive, setActive]=useState(false)
   return (
     <ScrollView
       style={{
-        backgroundColor: 'rgba(65, 71, 84, 0.8)',
+        backgroundColor: 'rgba(165, 171, 186, 0.8)',
       }}>
       <Text
         style={{color:'white'}}>Some text</Text>
@@ -82,6 +85,9 @@ export default function YourApp(){
         }}
         placeholder="You can type in me"
       />
+      <Scrollable />
+      <MyFlatList />
+      <MySectionedList />
     </ScrollView>
   );
 };
